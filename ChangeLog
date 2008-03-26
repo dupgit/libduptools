@@ -1,0 +1,7 @@
+20.02.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
+	   * Changed the version from 0.0.2 to 0.0.3
+	   * Changed the name to libduptools in order to publish it
+	   * Translated all comments from french to english (you may still 
+	     found french comments, please take the time to notify the
+	     author).
+	   * added entries to the ChangeLog

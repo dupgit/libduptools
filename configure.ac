@@ -117,8 +117,13 @@ CFLAGS="$CFLAGS -Wall -Wstrict-prototypes -Wmissing-declarations \
 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
 
 case $host in
+    *freebsd*)
+	AC_DEFINE_UNQUOTED(SYS_FREEBSD,1,[This is a FreeBSD system])
+	AC_DEFINE_UNQUOTED(SYS_POSIX,1,[This is a Posix system])
+	;;	
     *linux*)
 	AC_DEFINE_UNQUOTED(SYS_LINUX,1,[This is a Linux system])
+	AC_DEFINE_UNQUOTED(SYS_POSIX,1,[This is a Posix system])
 	;;
     *mingw*)
 	AC_DEFINE_UNQUOTED(SYS_MINGW,1,[This is a MinGW system])

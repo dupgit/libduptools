@@ -1,3 +1,10 @@
+30.03.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
+	   * Added SYS_POSIX variable to configure.ac to take into account
+	     all POSIX systems. In order that one may use the get_file_size
+	     function under freebsd, I added also a freebsd section and
+	     changed in files.c the #ifdef SYS_LINUX #endif block to
+	     #ifdef SYS_POSIX.
+	
 20.02.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
 	   * Changed the version from 0.0.2 to 0.0.3
 	   * Changed the name to libduptools in order to publish it

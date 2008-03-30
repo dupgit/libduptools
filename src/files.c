@@ -51,7 +51,7 @@ guint64 get_file_size(gchar *filename)
 }
 #endif /* SYS_MINGW */
 
-#ifdef SYS_LINUX
+#ifdef SYS_POSIX
 guint64 get_file_size(gchar *filename)
 {
   struct stat *stat_buf = NULL;
@@ -63,6 +63,6 @@ guint64 get_file_size(gchar *filename)
   else
     return 0;
 }
-#endif /* SYS_LINUX */
+#endif /* SYS_POSIX */
 
 

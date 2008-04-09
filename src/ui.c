@@ -1,9 +1,9 @@
 /* -*- indent-tabs-mode: t; tab-width: 4; c-basic-offset: 4; -*- */
 /*
-   ui.c
+   ldt_ui.c
    libduptools library
 
-   (C) Copyright 2007 Olivier Delhomme
+   (C) Copyright 2007-2008 Olivier Delhomme
    e-mail : olivierdelhomme@gmail.com
  
    This program is free software; you can redistribute it and/or modify

@@ -1,3 +1,7 @@
+09.04.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
+	   * Modified the files names in order that no confusion could be
+	     made by a compiler or such.
+
 30.03.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
 	   * Added SYS_POSIX variable to configure.ac to take into account
 	     all POSIX systems. In order that one may use the get_file_size

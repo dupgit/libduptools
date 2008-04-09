@@ -3,7 +3,7 @@
    duptools.h
    libduptools library
 
-   (C) Copyright 2007 Olivier Delhomme
+   (C) Copyright 2007-2008 Olivier Delhomme
    e-mail : olivierdelhomme@gmail.com
  
    This program is free software; you can redistribute it and/or modify
@@ -42,9 +42,9 @@
 #define LIBDUPTOOLS_HOMEPAGE "none"
 
 #include "config.h"
-#include "ui.h" 
-#include "locations.h"
-#include "log.h"
-#include "files.h"
+#include "ldt_ui.h" 
+#include "ldt_locations.h"
+#include "ldt_log.h"
+#include "ldt_files.h"
 
 #endif /* _LIBDUPTOOLS_H_ */

@@ -1,9 +1,9 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: t; c-basic-offset: 4 -*- */
 /*
-  locations.h
+  ldt_locations.h
   libduptools library
  
-  (C) Copyright 2007 Olivier Delhomme
+  (C) Copyright 2007-2008 Olivier Delhomme
   e-mail : olivierdelhomme@gmail.com
  
   This program is free software; you can redistribute it and/or modify

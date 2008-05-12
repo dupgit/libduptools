@@ -30,7 +30,7 @@ typedef struct
 	gboolean debug;        /* debug conditions ?                                  */
 } log_t;
 
-extern void log_message(log_t *log, GLogLevelFlags log_level, const char *format, ...);
-extern log_t *init_log_domain(GtkTextView *textview, gchar *log_domain, gboolean debug);
+extern void ldt_log_message(log_t *log, GLogLevelFlags log_level, const char *format, ...);
+extern log_t *ldt_init_log_domain(GtkTextView *textview, gchar *log_domain, gboolean debug);
 
 #endif /* _LIBDUPTOOLS_LOG_H_ */

@@ -28,7 +28,7 @@
  *  exists
  */
 #ifdef SYS_MINGW
-guint64 get_file_size(gchar *filename)
+guint64 ldt_get_file_size(gchar *filename)
 {
   WIN32_FILE_ATTRIBUTE_DATA attr;
   guint64 taille;
@@ -52,7 +52,7 @@ guint64 get_file_size(gchar *filename)
 #endif /* SYS_MINGW */
 
 #ifdef SYS_POSIX
-guint64 get_file_size(gchar *filename)
+guint64 ldt_get_file_size(gchar *filename)
 {
   struct stat *stat_buf = NULL;
 

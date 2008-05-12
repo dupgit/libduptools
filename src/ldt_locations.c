@@ -29,7 +29,7 @@
  *  which is quickier than append.
  *  TODO : take locations as a va_list parameter list
  */
-GList *init_location_list(GList *location_list, gchar *progname)
+GList *ldt_init_location_list(GList *location_list, gchar *progname)
 {
 	const gchar* const  *system_data_dirs;
 	guint i = 0;
@@ -83,7 +83,7 @@ GList *init_location_list(GList *location_list, gchar *progname)
 /**
  *  Returns the location for the first location's list element
  */
-gchar *get_location(GList *location_list)
+gchar *ldt_get_location(GList *location_list)
 {
   location_t *location;
 
@@ -99,7 +99,7 @@ gchar *get_location(GList *location_list)
 /**
  *  Returns the next location's list element
  */
-GList *location_list_next(GList *location_list)
+GList *ldt_location_list_next(GList *location_list)
 {
   if (location_list != NULL)
     return location_list->next;
@@ -110,7 +110,7 @@ GList *location_list_next(GList *location_list)
 /**
  *  Returns the previous location's list element
  */
-GList *location_list_prev(GList *location_list)
+GList *ldt_location_list_prev(GList *location_list)
 {
   if (location_list != NULL)
     return location_list->prev;

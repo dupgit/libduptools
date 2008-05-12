@@ -35,7 +35,7 @@
 #include <unistd.h>
 
 #define LIBDUPTOOLS_NAME "duptools"
-#define LIBDUPTOOLS_VERSION "0.0.3"  
+#define LIBDUPTOOLS_VERSION "0.0.4"  
 #define LIBDUPTOOLS_SUMMARY "libduptools library"
 #define LIBDUPTOOLS_DESCRIPTION "Provide some GTK and file operation wrappers"
 #define LIBDUPTOOLS_AUTHOR "Olivier Delhomme <olivierdelhomme@gmail.com>"

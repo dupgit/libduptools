@@ -1,6 +1,6 @@
 AC_PREREQ(2.59)
 
-AC_INIT([LIBDUPTOOLS], [0.0.3],
+AC_INIT([LIBDUPTOOLS], [0.0.4],
         [Olivier Delhomme],
         [libduptools])
 AC_CONFIG_HEADER([config.h])

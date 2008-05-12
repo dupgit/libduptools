@@ -28,9 +28,9 @@ typedef struct
   gchar *path;     /* one directory name that represents a particular location */
 } location_t;
 
-extern GList *init_location_list(GList *location_list, gchar *progname);
-extern gchar *get_location(GList *location_list);
-extern GList *location_list_next(GList *location_list);
-extern GList *location_list_prev(GList *location_list);
+extern GList *ldt_init_location_list(GList *location_list, gchar *progname);
+extern gchar *ldt_get_location(GList *location_list);
+extern GList *ldt_location_list_next(GList *location_list);
+extern GList *ldt_location_list_prev(GList *location_list);
 
 #endif /* _LIBDUPTOOLS_LOCATIONS_H_ */

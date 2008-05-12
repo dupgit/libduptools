@@ -52,7 +52,7 @@ static GladeXML *load_glade_xml_if_it_exists(gchar *file_to_load)
  *  Tries all paths defined in the 'location_list' list. If it succeed
  *  then the function returns the loaded XML else it returns NULL
  */ 
-GladeXML *load_glade_xml_file(GList *location_list, gchar *filename)
+GladeXML *ldt_load_glade_xml_file(GList *location_list, gchar *filename)
 {	
   gchar *file_to_load = NULL;
   gchar *path = NULL;
@@ -61,13 +61,13 @@ GladeXML *load_glade_xml_file(GList *location_list, gchar *filename)
 
   while (list != NULL && xml == NULL)
     {
-      path = get_location(list);
+      path = ldt_get_location(list);
       file_to_load =  g_strdup_printf("%s%c%s", path, G_DIR_SEPARATOR, filename);
 		  
       xml = load_glade_xml_if_it_exists(file_to_load);
 
       if (xml == NULL)
-	list = location_list_next(list);	
+	list = ldt_location_list_next(list);	
       g_free(file_to_load);
     }
 	
@@ -77,7 +77,7 @@ GladeXML *load_glade_xml_file(GList *location_list, gchar *filename)
 /**
  *  Add the text 'text' to the treeview 'tv'
  */
-void add_text_to_textview(gchar *text, GtkTextView *tv)
+void ldt_add_text_to_textview(gchar *text, GtkTextView *tv)
 {
   GtkTextBuffer *tb = NULL;
   GtkTextIter iStart;
@@ -93,7 +93,7 @@ void add_text_to_textview(gchar *text, GtkTextView *tv)
  *  Does not take into account inconsistent states
  *  returns the first active radio button it finds.
  */
-GtkWidget *gtk_radio_button_get_active(GSList *group)
+GtkWidget *ldt_gtk_radio_button_get_active(GSList *group)
 {
   GSList *tmp_slist = group;
   
@@ -116,11 +116,11 @@ GtkWidget *gtk_radio_button_get_active(GSList *group)
  *  @returns: the active #GtkRadioButton within the group from
  *            @radio_group_member
  **/
-GtkWidget *gtk_radio_button_get_active_from_widget(GtkRadioButton *radio_group_member)
+GtkWidget *ldt_gtk_radio_button_get_active_from_widget(GtkRadioButton *radio_group_member)
 { 
   if (radio_group_member != NULL)
 	  {
-		  return gtk_radio_button_get_active(radio_group_member->group);
+		  return ldt_gtk_radio_button_get_active(radio_group_member->group);
 	  }
   else
 	  {

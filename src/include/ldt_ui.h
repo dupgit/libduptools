@@ -23,9 +23,9 @@
 #ifndef _LIBDUPTOOLS_UI_H_
 #define _LIBDUPTOOLS_UI_H_
 
-extern GladeXML *load_glade_xml_file(GList *location_list, gchar *filename);
-extern void add_text_to_textview(gchar *text, GtkTextView *tv);
-extern GtkWidget *gtk_radio_button_get_active(GSList *group);
-extern GtkWidget *gtk_radio_button_get_active_from_widget(GtkRadioButton *radio_group_member);
+extern GladeXML *ldt_load_glade_xml_file(GList *location_list, gchar *filename);
+extern void ldt_add_text_to_textview(gchar *text, GtkTextView *tv);
+extern GtkWidget *ldt_gtk_radio_button_get_active(GSList *group);
+extern GtkWidget *ldt_gtk_radio_button_get_active_from_widget(GtkRadioButton *radio_group_member);
 
 #endif /* _LIBDUPTOOLS_UI_H_ */

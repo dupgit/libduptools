@@ -84,7 +84,7 @@ static void my_log(log_t *log, GLogLevelFlags log_level, const char *format, ...
 
 	g_print("%s", display);
 
-	add_text_to_textview(display, log->textview);
+	ldt_add_text_to_textview(display, log->textview);
 	
 	g_free(str);
 	g_free(display);
@@ -95,7 +95,7 @@ static void my_log(log_t *log, GLogLevelFlags log_level, const char *format, ...
  * log messages at the desired level within the corresponding
  * log domain
  */
-void log_message(log_t *log, GLogLevelFlags log_level, const char *format, ...)
+void ldt_log_message(log_t *log, GLogLevelFlags log_level, const char *format, ...)
 {
 	va_list args;
 	gchar *str = NULL;
@@ -145,7 +145,7 @@ void log_message(log_t *log, GLogLevelFlags log_level, const char *format, ...)
 /**
  *  Inits the log domain
  */
-extern log_t *init_log_domain(GtkTextView *textview, gchar *log_domain, gboolean debug)
+extern log_t *ldt_init_log_domain(GtkTextView *textview, gchar *log_domain, gboolean debug)
 {
   log_t *log = NULL;
 

@@ -30,6 +30,6 @@
  #include <winioctl.h>
 #endif /* SYS_MINGW */
 
-extern guint64 get_file_size(gchar *filename);
+extern guint64 ldt_get_file_size(gchar *filename);
 
 #endif /* _LIBDUPTOOLS_FILES_H_ */

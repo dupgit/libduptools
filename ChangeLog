@@ -1,3 +1,8 @@
+12.05.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
+	   * !!! Modified the API !!!
+	     Now all functions are prefixed with ldt_
+	     Version 0.0.4
+	
 09.04.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
 	   * Modified the files names in order that no confusion could be
 	     made by a compiler or such.

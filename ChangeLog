@@ -1,3 +1,11 @@
+13.05.2008 Sebastien Tricaud <toady@gscore.org>
+	   * cleanups :
+	     - changed the french word "taille" to the english equivalent
+	       "size"
+	     - get rid of autotools specific version calls
+	     - g_free on stat_buf when returning 0
+	     
+	
 12.05.2008 Olivier Delhomme <olivierdelhomme@gmail.com>
 	   * !!! Modified the API !!!
 	     Now all functions are prefixed with ldt_

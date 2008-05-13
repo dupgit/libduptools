@@ -5,7 +5,7 @@
 
    (C) Copyright 2007-2008 Olivier Delhomme
    e-mail : olivierdelhomme@gmail.com
- 
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -18,7 +18,7 @@
 
    You should have received a copy of the GNU General Public License
    along with this program; if not, write to the Free Software Foundation,
-   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.           
+   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 */
 
 #include "duptools.h"
@@ -31,20 +31,20 @@
 guint64 ldt_get_file_size(gchar *filename)
 {
   WIN32_FILE_ATTRIBUTE_DATA attr;
-  guint64 taille;
-  
+  guint64 size;
+
   if (GetFileAttributesEx(filename, GetFileExInfoStandard, &attr) != 0)
    {
      if (attr.nFileSizeHigh != 0)
        {
-	 taille = attr.nFileSizeHigh;
-	 taille = taille << 32;
-	 taille += attr.nFileSizeLow;
+	 size = attr.nFileSizeHigh;
+	 size = size << 32;
+	 size += attr.nFileSizeLow;
        }
      else
-       taille = attr.nFileSizeLow;
+       size = attr.nFileSizeLow;
 
-     return taille;
+     return size;
    }
   else
     return 0;
@@ -58,9 +58,11 @@ guint64 ldt_get_file_size(gchar *filename)
 
   stat_buf = (struct stat *) g_malloc0 (sizeof(struct stat));
 
-  if (g_stat(filename, stat_buf) == 0)
+  if (g_stat(filename, stat_buf) == 0) {
     return (guint64) stat_buf->st_size;
-  else
+  }
+
+    g_free(stat_buf);
     return 0;
 }
 #endif /* SYS_POSIX */
